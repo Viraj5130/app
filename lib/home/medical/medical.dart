@@ -1,4 +1,6 @@
+import 'package:app/home/medical/donate.dart';
 import 'package:app/home/medical/request.dart';
+import 'package:app/home/medical/requestpage.dart';
 import 'package:flutter/material.dart';
 
 class Medical extends StatefulWidget {
@@ -8,7 +10,7 @@ class Medical extends StatefulWidget {
 
 class MedicalState extends State<Medical> {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {SingleChildScrollView();
 return Scaffold(
    appBar: AppBar(
         backgroundColor: Colors.purpleAccent,
@@ -34,7 +36,7 @@ return Scaffold(
         child: Row(mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[Padding(
             padding: const EdgeInsets.all(8.0),
-            child:InkWell(onTap:(){},child: Column(children:<Widget>[
+            child:InkWell(onTap:(){Navigator.push(context, MaterialPageRoute(builder: (context)=>Donate()));},child: Column(children:<Widget>[
               Container(
                  child: CircleAvatar(backgroundImage: new AssetImage('assets/images/don.png'),radius: 55,
               )
@@ -55,7 +57,7 @@ return Scaffold(
        Container(
         child: Padding(
           padding: const EdgeInsets.all(80),
-          child:InkWell(onTap:(){Navigator.push(context, MaterialPageRoute(builder: (context)=>Request()));},child: Column(mainAxisAlignment: MainAxisAlignment.center,
+          child:InkWell(onTap:(){Navigator.push(context, MaterialPageRoute(builder: (context)=>Requestpage()));},child: Column(mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
                  child: CircleAvatar(backgroundImage: new AssetImage('assets/images/rec.jpg'),radius: 55,
